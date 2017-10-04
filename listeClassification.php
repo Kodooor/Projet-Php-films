@@ -3551,8 +3551,8 @@ array(568, 8)
     $insert = "INSERT INTO Classification (ref_code_film, ref_code_genre)
     VALUES (:ref_code_film,:ref_code_genre)";
     $stmt = $file_db->prepare($insert);
-    $stmt->bindParam(':code_genre', $code_genre);
-    $stmt->bindParam(':nom_genre', $nom_genre);
+    $stmt->bindParam(':ref_code_film', $ref_code_film);
+    $stmt->bindParam(':ref_code_genre', $ref_code_genre);
 
     foreach($classification_test as $c){
       $ref_code_film = $c[0];
