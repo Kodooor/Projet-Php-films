@@ -17,8 +17,6 @@ $criteres=[
   )
 ];
 
-
-
 function question_text($q){
   echo ("<p>" . $q["text"] . "</br><input type ='text' name='$q[name]'>" . "</p>");
 }
@@ -28,60 +26,45 @@ $question_handlers = array(
 );
 
 
-// Bouton de recherche Film
+// redirection des pages par les boutons
 
 
-if ($_SERVER["REQUEST_METHOD"]=="GET"){
-  
-	echo "<form method='POST' action='accueuil.php'><ol>";
+// if ($_SERVER["REQUEST_METHOD"]=="GET"){
+  // Bouton recherche
 
+  echo "<form method='POST' action='accueuil.php'><ol>";
+  echo "Trouver film". "<br>";
 
-  echo "Trouver film";
-  // echo "<form method='POST' action='accueuil.php'>";
   foreach ($criteres as $c){
     $question_handlers[$c["type"]]($c);
   }
-  echo "<div><input type='submit' value='Rechercher'></div>";
 
+  echo "<div><input type='submit' value='Rechercher'></div>";
   echo "<ol>";
+
   foreach($theme as $t){
     echo "<li><input type='submit' value=$t ></li>";
   }
-  echo "</ol>";
-}
-  else{
-  	echo "" ;
-  }
+  echo "</ol></form>";
 
 
-// Ajouter + Supprimer film
+  // Ajouter
 
-if ($_SERVER["REQUEST_METHOD"]=="GET"){
-	// echo "<form method='POST' action='ajouter_film.php'>";
-  //
-  // echo "Ajouter film";
-  // echo "<input type='submit' value='Ajouter'>";
-
+  echo "Ajouter film". "<br>";
   echo "<form method='POST' action='ajouter_film.php'><ol>";
-
-  echo "Ajouter film";
-
-
-  echo "<div><input type='submit' value='Ajouter'></div>";
-}
-else{
-    echo "<form method='POST' action='ajouter_film.php'>";
-}
+  echo "<input type='submit' value='Ajouter'></form>". "<br>";
 
 
+  // Supprimer film
 
-
+  echo "Supprimer film " . "<br>";
+  echo "<form method='POST' action='supprimer_film.php'><ol>";
+  echo "<input type='submit' value='Supprimer'></form>". "<br>";
 
 
 
   //
   // echo "<input type='submit' value='Supprimer'></div>";
-
 
 
 ?>

@@ -28,7 +28,7 @@ $ajoute=[
   array(
 		"type"=>"text",
 		"name"=>"genre",
-		"text" => "genre"
+		"text" => "Genre"
 	)];
 
 
@@ -42,11 +42,20 @@ $ajoute=[
   );
 
 
-  foreach($ajoute as $a){
-    echo "<li>";
-    $question_handlers[$a["type"]($a)];
-  }
-  echo "</ol><input type='submit' value='Ajouter Q'>";
+
+
+  	echo "<form method='POST' action='film_ajouter.php'><ol>";
+    echo " Veuillez insérer les infos du film : ";
+
+    foreach ($ajoute as $a){
+      $question_handlers[$a["type"]]($a);
+    }
+    echo "<input type='submit' value='Ajouter'></form>";
+    echo "<ol>";
+
+
+
+
 
 
   ?>
