@@ -37,6 +37,19 @@ $ajoute=[
     echo ("<p>" . $q["text"] . "</br><input type ='text' name='$q[name]'>" . "</p>");
   }
 
+  function question_select($q){
+    $html = "<p>" . $q["text"];
+    $i = 0;
+    $html .= "<select name='$q[name]'>";
+    foreach ($q["choices"] as $c){
+      //<option value="chine">Chine</option>
+      $i +=1;
+      $html .= "<option value='$c[text]'>$c[text]</option>";
+    }
+    $html .= "</select></p>";
+    echo $html;
+  }
+
   $question_handlers = array(
     "text" => "question_text"
   );

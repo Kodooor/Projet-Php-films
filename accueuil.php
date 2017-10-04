@@ -16,13 +16,51 @@ $criteres=[
     "text" => "Rechercher avec le titre :",
   )
 ];
+$tri=[
+  array(
+    "type" => "select",
+    "name" => "trier",
+    "text" => "Trier par  ",
+    "choices" => [
+  	   array(
+  		      "name"=>"titre",
+  		      "text" => "Titre"
+  	       ),
+        array(
+  		      "name"=>"annee",
+  		      "text" => "Année de réalisations"
+  	           ),
+        array(
+  		       "name"=>"realisateur",
+  		       "text" => "Réalisateur"
+  	        ),
+        array(
+  		       "name"=>"genre",
+  		       "text" => "Genre"
+  	        )
+  ])
+];
 
 function question_text($q){
   echo ("<p>" . $q["text"] . "</br><input type ='text' name='$q[name]'>" . "</p>");
 }
 
+function question_select($q){
+  $html = "<p>" . $q["text"];
+  $i = 0;
+  $html .= "<select name='$q[name]'>";
+  foreach ($q["choices"] as $c){
+    //<option value="chine">Chine</option>
+    $i +=1;
+    $html .= "<option value='$c[name]'>$c[text]</option>";
+  }
+  $html .= "</select></p>";
+  echo $html;
+}
+
 $question_handlers = array(
-  "text" => "question_text"
+  "text" => "question_text",
+  "select" => "question_select"
 );
 
 
@@ -45,6 +83,7 @@ $question_handlers = array(
   foreach($theme as $t){
     echo "<li><input type='submit' value=$t ></li>";
   }
+
   echo "</ol></form>";
 
 
@@ -63,8 +102,12 @@ $question_handlers = array(
 
 
 
-  //
-  // echo "<input type='submit' value='Supprimer'></div>";
+  //Trier les films
+  foreach ($tri as $t){
+    $question_handlers[$t["type"]]($t);
+  }
+
+
 
 
 ?>
