@@ -44,7 +44,7 @@
 
   echo "Titre:" . " <input type ='text' name='Rechercher'>";
 
-  echo "<input type='submit' value='Rechercher'></div>";
+  echo "<input type='submit' value='Rechercher'></div></form>";
 
    ?>
 
@@ -100,21 +100,21 @@ function question_select($q){
   echo "<aside>";
   echo "<form method='POST' action='ajouter_film.php'><ol>";
   echo "<input type='submit' value='Ajouter un film'></form>". "<br>";
-  echo "</aside>";
+
 
 
   // Supprimer film
 
   echo "<form method='POST' action='supprimer_film.php'><ol>";
   echo "<input type='submit' value='Supprimer un film'></form>". "<br>";
+  echo "</aside>";
 
-
-
+  echo "<div id='trier' >";
   //Trier les films
   foreach ($tri as $t){
     $question_handlers[$t["type"]]($t);
   }
-
+  echo "</div>";
 
 
 
