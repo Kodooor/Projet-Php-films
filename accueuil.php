@@ -50,43 +50,7 @@
 
 </header>
 <?php
-$tri=[
-  array(
-    "type" => "select",
-    "name" => "trier",
-    "text" => "Trier par  ",
-    "choices" => [
-  	   array(
-  		      "name"=>"titre",
-  		      "text" => "Titre"
-  	       ),
-        array(
-  		      "name"=>"annee",
-  		      "text" => "Année de réalisations"
-  	           ),
-        array(
-  		       "name"=>"realisateur",
-  		       "text" => "Réalisateur"
-  	        ),
-        array(
-  		       "name"=>"genre",
-  		       "text" => "Genre"
-  	        )
-  ])
-];
 
-function question_select($q){
-  $html = "<p>" . $q["text"];
-  $i = 0;
-  $html .= "<select name='$q[name]'>";
-  foreach ($q["choices"] as $c){
-    //<option value="chine">Chine</option>
-    $i +=1;
-    $html .= "<option value='$c[name]'>$c[text]</option>";
-  }
-  $html .= "</select></p>";
-  echo $html;
-}
 
 // redirection des pages par les boutons
 
