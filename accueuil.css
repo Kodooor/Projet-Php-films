@@ -17,3 +17,7 @@ header{
 #rechercher{
   margin : auto; 
 }
+aside{
+  display:flex;
+  margin-left: 35%;
+}
