@@ -4,15 +4,16 @@
 <title>Search Film</title>
 <link rel="stylesheet" href="accueuil.css"/>
 </head>
+<body>
 <header>
-  <h1>Search Film </h1>
+  <h1><img src="title.png" alt="Search film" style="width:150px;height:70px;"></h1>
   <?php
   $theme=["Action"," Comédie","Drame", "Fiction","Horreur","Romance","Thriller"];
   $criteres=[
     array(
       "type" => "text",
       "name" => "recherchertitre",
-      "text" => "Rechercher avec le titre :",
+      "text" => "Titre:",
     )
   ];
 
@@ -37,19 +38,17 @@
 
   //Rechercher un film
 
-  echo "<form method='POST' action='accueuil.php'><ol>";
-
   echo "<div id='rechercher'>";
 
-  foreach($criteres as $c){
-    $question_handlers[$c["type"]]($c);}
+  echo "<form method='POST' action='accueuil.php'><ol>";
+
+  echo "Titre:" . " <input type ='text' name='Rechercher'>";
 
   echo "<input type='submit' value='Rechercher'></div>";
 
    ?>
 
 </header>
-<body>
 <?php
 $tri=[
   array(
@@ -98,9 +97,10 @@ function question_select($q){
 
 
   // Ajouter
-
+  echo "<aside>";
   echo "<form method='POST' action='ajouter_film.php'><ol>";
   echo "<input type='submit' value='Ajouter un film'></form>". "<br>";
+  echo "</aside>";
 
 
   // Supprimer film
