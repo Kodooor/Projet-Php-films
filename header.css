@@ -1,0 +1,23 @@
+li{ 
+  list-style-type : none;
+}
+ol{
+  display : inline-flex;
+  margin : auto;
+}
+h1{
+  margin :auto;
+  padding-left: 2%;
+}
+header{
+  display:flex;
+  background-color:gray;
+  padding-right: 4%;
+}
+#rechercher{
+  margin : auto; 
+}
+aside{
+  display:flex;
+  margin-left: 35%;
+}
