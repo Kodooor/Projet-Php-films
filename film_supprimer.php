@@ -12,8 +12,8 @@
   try{
     function supprimer_un_membre(){
       $file_db = new PDO("sqlite:listeFilms.sqlite");
-      $recherche = $_POST['titre'];
-        $delete = "DELETE FROM Films WHERE titre_original = '$recherche'";
+      $recherche = $_POST['code_film'];
+        $delete = "DELETE FROM Films WHERE code_film = '$recherche'";
         $stmt = $file_db->prepare($delete);
         $stmt->execute();
         echo "<form action='film_supprimer.php'><br>";

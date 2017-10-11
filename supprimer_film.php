@@ -12,8 +12,8 @@
 $sup=[
 	array(
 		"type"=>"text",
-		"name"=>"titre",
-		"text" => "Titre"
+		"name"=>"code_film",
+		"text" => "Code du film"
 
 	)];
 
