@@ -12,24 +12,50 @@
 $ajoute=[
 	array(
 		"type"=>"text",
-		"name"=>"titre",
-		"text" => "Titre"
+		"name"=>"code",
+		"text" => "code_film"
 	),
   array(
 		"type"=>"text",
-		"name"=>"annee",
-		"text" => "Année de réalisations"
+		"name"=>"titreO",
+		"text" => "titre_original"
 	),
   array(
 		"type"=>"text",
-		"name"=>"realisateur",
-		"text" => "Réalisateur"
+		"name"=>"titreFr",
+		"text" => "titre_francais"
 	),
   array(
 		"type"=>"text",
-		"name"=>"genre",
-		"text" => "Genre"
-	)];
+		"name"=>"Pays",
+		"text" => "pays"
+	),
+  array(
+		"type"=>"text",
+		"name"=>"Date",
+		"text" => "date"
+	),
+  array(
+		"type"=>"text",
+		"name"=>"Duree",
+		"text" => "duree"
+	),
+  array(
+		"type"=>"text",
+		"name"=>"Couleur",
+		"text" => "couleur"
+	),
+  array(
+		"type"=>"text",
+		"name"=>"Réalisateur",
+		"text" => "realisateur"
+	),
+  array(
+		"type"=>"text",
+		"name"=>"Image",
+		"text" => "image"
+	)
+];
 
 
 
@@ -55,22 +81,47 @@ $ajoute=[
   );
 
 
-
-
   	echo "<form method='POST' action='film_ajouter.php'><ol>";
     echo " Veuillez insérer les infos du film : ";
 
     foreach ($ajoute as $a){
       $question_handlers[$a["type"]]($a);
     }
-    echo "<input type='submit' value='Ajouter'></form>";
     echo "<ol>";
 
-
-
-
-
-
   ?>
+  <?php
+  try{
+    function ajouter_un_film(){
+      $file_db = new PDO("sqlite:listeFilms.sqlite");
+      $insert = "INSERT INTO Films (code_film,titre_original,titre_francais, pays, date,
+duree, couleur, realisateur,image)
+                 VALUES (:code_film,:titre_original,:titre_francais,:pays,:date,:duree,
+:couleur,:realisateur,:image)";
+
+        $stmt = $file_db->prepare($insert);
+        $stmt->bindParam(':code_film',$_GET["code"]);
+        $stmt->bindParam(':titre_original', $_GET["titreO"]);
+        $stmt->bindParam(':titre_francais', $_GET["titreFr"]);
+        $stmt->bindParam(':pays', $_GET["Pays"]);
+        $stmt->bindParam(':date', $_GET["Date"]);
+        $stmt->bindParam(':duree', $_GET["Duree"]);
+        $stmt->bindParam(':couleur', $_GET["Couleur"]);
+        $stmt->bindParam(':realisateur', $_GET["Réalisateur"]);
+        $stmt->bindParam(':image', $_GET["Image"]);
+        $stmt->execute();
+        echo $_GET["code"];
+        echo "<form action='ajouter_film.php'><br>";
+        echo "<input type='submit' value='ajouter_film'></form>";
+    }
+
+    ajouter_un_film();
+  }
+  catch(PDOException $e){
+    echo $e->getMessage();
+  }
+
+
+   ?>
   </body>
   </html>

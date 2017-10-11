@@ -10,7 +10,7 @@
 <?php
 
 echo "Vous avez supprimé le film ! ";
-echo "<form method='POST' action='accueuil.php'><ol>";
+echo "<form method='POST' action='accueil.php'><ol>";
 echo "<input type='submit' value='Accueil'></form>";
 
 

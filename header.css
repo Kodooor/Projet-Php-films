@@ -17,6 +17,7 @@ header{
 #rechercher{
   margin : auto; 
 }
+<<<<<<< HEAD
 
 #tous {
   display: flex;
@@ -35,3 +36,9 @@ header{
   border-collapse: collapse;
 }
 
+=======
+aside{
+  display:flex;
+  margin-left: 35%;
+}
+>>>>>>> sofiane/master

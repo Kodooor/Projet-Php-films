@@ -34,17 +34,17 @@
     echo "<li><input type='submit' value=$t ></li>";
   }
 
-  echo "</ol></form>";
+  echo "</ol>";
 
   //Rechercher un film
 
   echo "<div id='rechercher'>";
 
-  echo "<form method='POST' action='accueuil.php'><ol>";
+  echo "<form method='POST' action='accueuil.php'>";
 
   echo "Titre:" . " <input type ='text' name='Rechercher'>";
 
-  echo "<input type='submit' value='Rechercher'></div></form>";
+  echo "<input type='submit' value='Rechercher'></form></div>";
 
    ?>
 
@@ -62,18 +62,14 @@
 
   // Ajouter
   echo "<aside>";
-  echo "<form method='POST' action='ajouter_film.php'><ol>";
-  echo "<input type='submit' value='Ajouter un film'></form>". "<br>";
-
-
+  echo "<form method='POST' action='ajouter_film.php'>";
+  echo "<input type='submit' value='Ajouter un film'></form>". "<br><br>";
 
   // Supprimer film
 
-  echo "<form method='POST' action='supprimer_film.php'><ol>";
+  echo "<form method='POST' action='supprimer_film.php'>";
   echo "<input type='submit' value='Supprimer un film'></form>". "<br>";
   echo "</aside>";
-
-
 
 
 
