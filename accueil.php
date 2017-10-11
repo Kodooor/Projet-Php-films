@@ -26,9 +26,9 @@
 
     // Supprimer film
 
-    echo "<form method='POST' action='supprimer_film.php'><ol>";
+    echo "<form method='POST' action='supprimer_film.php'>";
     echo "<input type='submit' value='Supprimer un film'></form>". "<br>";
-    echo "</aside>";
+    echo "<ol></aside>";
 
 
    ?>

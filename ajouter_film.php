@@ -4,7 +4,7 @@
 <title>Search Film</title>
 </head>
 <header>
-  <h1>Search Film </h1>
+  <h1><img src="title.png" alt="Search film" style="width:150px;height:70px;"></h1>
 </header>
 <body>
 <?php
@@ -68,6 +68,9 @@ $ajoute=[
       $question_handlers[$a["type"]]($a);
     }
     echo "<input type='submit' value='Ajouter'></form></ol>";
+
+    echo "<form method='POST' action='accueil.php'><ol>";
+    echo "<input type='submit' value='Accueil'></form>";
   ?>
 
   </body>
