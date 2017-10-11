@@ -14,21 +14,7 @@ $sup=[
 		"type"=>"text",
 		"name"=>"titre",
 		"text" => "Titre"
-	// ),
-  // array(
-	// 	"type"=>"text",
-	// 	"name"=>"annee",
-	// 	"text" => "Année de réalisations"
-	// ),
-  // array(
-	// 	"type"=>"text",
-	// 	"name"=>"realisateur",
-	// 	"text" => "Réalisateur"
-	// ),
-  // array(
-	// 	"type"=>"text",
-	// 	"name"=>"genre",
-	// 	"text" => "Genre"
+
 	)];
 
 
@@ -42,20 +28,16 @@ $sup=[
   );
 
 
-  	echo "<form method='POST' action='film_supprimer.php'><ol>";
+  	echo "<form method='GET' action='film_supprimer.php'><ol>";
     echo " Veuillez insérer le titre du film : ";
 
     foreach ($sup as $a){
       $question_handlers[$a["type"]]($a);
     }
     echo "<input type='submit' value='Supprimer'></form>";
-    echo "<ol>";
-
-
-
-
-
+    echo "</ol>";
 
   ?>
+
   </body>
   </html>
