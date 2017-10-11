@@ -138,7 +138,7 @@ echo "</div>";
 
 
 
-    $films_test = array
+    $films_test = array(
 );
     $insert = "INSERT INTO Films (code_film,titre_original,
 titre_francais, pays, date, duree, couleur, realisateur,image)
