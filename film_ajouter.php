@@ -11,7 +11,7 @@
 try{
   function ajouter_un_film(){
     $file_db = new PDO("sqlite:listeFilms.sqlite");
-    $requete_code = $file_db->query("SELECT max(code_film) FROM films");
+    $requete_code = $file_db->query("SELECT max(code_film) FROM Films");
     $donnees = $requete_code->fetch();
     $insert = "INSERT INTO Films (code_film,titre_original,titre_francais, pays, date,
 duree, couleur, realisateur,image)
@@ -29,19 +29,17 @@ duree, couleur, realisateur,image)
       $stmt->bindParam(':realisateur', $_POST["Réalisateur"]);
       $stmt->bindValue(':image', "NB.jpg");
       $stmt->execute();
-      echo "<form action='ajouter_film.php'><br>";
+
   }
   ajouter_un_film();
 }
 catch(PDOException $e){
   echo $e->POSTMessage();
 }
-
-
-
 echo "Vous avez ajouté le film ! ";
 echo "<form method='POST' action='accueil.php'><ol>";
-echo "<input type='submit' value='Accueil'></form>";
+echo "<input type='submit' value='Accueil'></form></ol>";
+
 
 
 ?>

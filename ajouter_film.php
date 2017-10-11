@@ -10,54 +10,47 @@
 <?php
 
 $ajoute=[
-	array(
-		"type"=>"text",
-		"name"=>"code",
-		"text" => "code_film"
-	),
   array(
 		"type"=>"text",
 		"name"=>"titre",
-		"text" => "titre_original"
+		"text" => "Titre original"
 	),
   array(
 		"type"=>"text",
 		"name"=>"titreFr",
-		"text" => "titre_francais"
+		"text" => "Titre français"
 	),
   array(
 		"type"=>"text",
 		"name"=>"Pays",
-		"text" => "pays"
+		"text" => "Pays"
 	),
   array(
 		"type"=>"text",
 		"name"=>"Date",
-		"text" => "date"
+		"text" => "Date (année)"
 	),
   array(
 		"type"=>"text",
 		"name"=>"Duree",
-		"text" => "duree"
+		"text" => "Durée (minutes)"
 	),
   array(
 		"type"=>"text",
 		"name"=>"Couleur",
-		"text" => "couleur"
+		"text" => "Couleur"
 	),
   array(
 		"type"=>"text",
 		"name"=>"Réalisateur",
-		"text" => "realisateur"
+		"text" => "Réalisateur (numéro)"
 	),
   array(
 		"type"=>"text",
 		"name"=>"Image",
-		"text" => "image"
+		"text" => "Image (NB.jpeg) "
 	)
 ];
-
-
 
   function question_text($q){
     echo ("<p>" . $q["text"] . "</br><input type ='text' name='$q[name]'>" . "</p>");
@@ -74,8 +67,7 @@ $ajoute=[
     foreach ($ajoute as $a){
       $question_handlers[$a["type"]]($a);
     }
-    echo "</ol>";
-    echo "<input type='submit' value='Ajouter'></form>";
+    echo "<input type='submit' value='Ajouter'></form></ol>";
   ?>
 
   </body>
