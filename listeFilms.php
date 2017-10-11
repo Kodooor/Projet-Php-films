@@ -116,7 +116,7 @@ echo "</div>";
 
 
   try{
-    $file_db = new PDO('sqlite:BD/listeFilms.sqlite');
+    $file_db = new PDO('sqlite:../BD/listeFilms.sqlite');
     $file_db->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
     $file_db->exec("CREATE TABLE IF NOT EXISTS Films(
       code_film INTEGER,

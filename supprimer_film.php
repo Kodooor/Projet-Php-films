@@ -28,13 +28,18 @@ $sup=[
   );
 
 
-  	echo "<form method='GET' action='film_supprimer.php'><ol>";
+  	echo "<form method='POST' action='film_supprimer.php'><ol>";
     echo " Veuillez insérer le titre du film : ";
 
     foreach ($sup as $a){
       $question_handlers[$a["type"]]($a);
     }
     echo "<input type='submit' value='Supprimer'></form>";
+
+
+    echo "<form method='POST' action='accueil.php'><ol>";
+    echo "<input type='submit' value='Accueil'></form>";
+
     echo "</ol>";
 
   ?>
