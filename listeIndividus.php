@@ -8,7 +8,7 @@
 <body>
 <?php
   try{
-    $file_db = new PDO('sqlite:BD/listeIndividus.sqlite');
+    $file_db = new PDO('sqlite:../BD/listeIndividus.sqlite');
     $file_db->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
     $file_db->exec("CREATE TABLE IF NOT EXISTS Individus(
       code_indiv INTEGER,
