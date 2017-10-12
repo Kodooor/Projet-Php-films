@@ -18,7 +18,6 @@ $sup=[
 	)];
 
 
-
   function question_text($q){
     echo ("<p>" . $q["text"] . "</br><input type ='text' name='$q[name]'>" . "</p>");
   }
@@ -28,7 +27,7 @@ $sup=[
   );
 
 
-  	echo "<form method='POST' action='film_supprimer.php'><ol>";
+  	echo "<form method='POST' action='../film/film_supprimer.php'><ol>";
     echo " Veuillez insérer le titre du film : ";
 
     foreach ($sup as $a){
@@ -37,7 +36,7 @@ $sup=[
     echo "<input type='submit' value='Supprimer'></form>";
 
 
-    echo "<form method='POST' action='accueil.php'><ol>";
+    echo "<form method='POST' action='../accueil/accueil.php'><ol>";
     echo "<input type='submit' value='Accueil'></form>";
 
     echo "</ol>";

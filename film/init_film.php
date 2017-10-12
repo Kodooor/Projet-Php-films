@@ -10,104 +10,8 @@
     <h1><img src="title.png" alt="Search film" style="width:150px;height:70px;"></h1>
   <?php
 
-
-
-    $criteres=[
-      array(
-        "type" => "text",
-        "name" => "recherchertitre",
-        "text" => "Titre:",
-      )
-    ];
-
-    function question_text($q){
-      echo ("<p>" . $q["text"] . "<input type ='text' name='$q[name]'>" . "</p>");
-    }
-
-    $question_handlers = array(
-      "text" => "question_text",
-      "select" => "question_select"
-    );
-
-    //Rechercher un film
-
-    echo "<div id='rechercher'>";
-
-    echo "<form method='POST' action='accueuil.php'><ol>";
-
-    echo "Titre:" . " <input type ='text' name='Rechercher'>";
-
-    echo "<input type='submit' value='Rechercher'></div></form>";
-
-     ?>
-  </header>
-
-
-
-
-
-
-
-<?php
-// PARTIE TRIE + FILMS
-
-$tri=[
-  array(
-    "type" => "select",
-    "name" => "trier",
-    "text" => "Trier par  ",
-    "choices" => [
-  	   array(
-  		      "name"=>"titre",
-  		      "text" => "Titre"
-  	       ),
-        array(
-  		      "name"=>"annee",
-  		      "text" => "Année de réalisations"
-  	           ),
-        array(
-  		       "name"=>"realisateur",
-  		       "text" => "Réalisateur"
-  	        ),
-        array(
-  		       "name"=>"genre",
-  		       "text" => "Genre"
-  	        )
-  ])
-];
-
-
-function question_select($q){
-  $html = "<p>" . $q["text"];
-  $i = 0;
-  $html .= "<select name='$q[name]'>";
-  foreach ($q["choices"] as $c){
-    //<option value="chine">Chine</option>
-    $i +=1;
-    $html .= "<option value='$c[name]'>$c[text]</option>";
-  }
-  $html .= "</select></p>";
-  echo $html;
-}
-
-
-echo "<div id='trier' >";
-
-//Trier les films
-foreach ($tri as $t){
-  $question_handlers[$t["type"]]($t);
-
-
-
-
-}
-echo "</div>";
-
-
-
-
   try{
-    $file_db = new PDO('sqlite:../BD/listeFilms.sqlite');
+    $file_db = new PDO('sqlite:../../BD/BD_PROJET.sqlite');
     $file_db->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
     $file_db->exec("CREATE TABLE IF NOT EXISTS Films(
       code_film INTEGER,
@@ -713,20 +617,22 @@ VALUES (:code_film,:titre_original,:titre_francais,:pays,:date,:duree,
       $image = $c[8];
       $stmt->execute();
     }
-    echo "Quelques films". "<br>";
-    $result = $file_db->query('SELECT * FROM Films;');
-
-    echo "<div id='tous' >";
-    foreach($result as $m){
-      echo "<div id='film'>" . $m[0] . ' ' . $m[1] . ' ' .
-      $m[2] . ' ' . $m[3] . ' ' . $m[4] . ' ' .
-      $m[5] . ' ' . $m[6] . ' ' . $m[7] . ' ' . $m[8] . "<br>". "</div>";
-    }
+    // echo "Quelques films". "<br>";
+    // $result = $file_db->query('SELECT * FROM Films;');
+    //
+    // echo "<div id='tous' >";
+    // foreach($result as $m){
+    //   echo "<div id='film'>" . $m[0] . ' ' . $m[1] . ' ' .
+    //   $m[2] . ' ' . $m[3] . ' ' . $m[4] . ' ' .
+    //   $m[5] . ' ' . $m[6] . ' ' . $m[7] . ' ' . $m[8] . "<br>". "</div>";
+    // }
+    echo "BD INITIALISEE";
     $file_db = null;
   }
   catch(PDOException $e){
     echo $e->getMessage();
   }
+
   echo "</div>";
 ?>
 </body>

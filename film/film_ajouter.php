@@ -10,7 +10,7 @@
 <?php
 try{
   function ajouter_un_film(){
-    $file_db = new PDO('sqlite:../BD/listeFilms.sqlite');
+    $file_db = new PDO('sqlite:../../BD/BD_PROJET.sqlite');
     $requete_code = $file_db->query("SELECT max(code_film) FROM Films");
     $donnees = $requete_code->fetch();
     $insert = "INSERT INTO Films (code_film,titre_original,titre_francais, pays, date,
@@ -32,16 +32,15 @@ duree, couleur, realisateur,image)
 
   }
   ajouter_un_film();
+  echo "Vous avez ajouté le film ! ";
 }
 catch(PDOException $e){
   echo $e->POSTMessage();
+  echo "L'ajout a échoué ! ";
 }
-echo "Vous avez ajouté le film ! ";
-echo "<form method='POST' action='accueil.php'><ol>";
-echo "<input type='submit' value='Accueil'></form></ol>";
 
-echo "<form method='POST' action='accueil.php'><ol>";
-echo "<input type='submit' value='Accueil'></form>";
+echo "<form method='POST' action='../accueil/accueil.php'><ol>";
+echo "<input type='submit' value='Accueil'></form><br>";
 
 
 
