@@ -69,7 +69,7 @@ $ajoute=[
     }
     echo "<input type='submit' value='Ajouter'></form></ol>";
 
-    echo "<form method='POST' action='accueil.php'><ol>";
+    echo "<form method='POST' action='../accueil/accueil.php'><ol>";
     echo "<input type='submit' value='Accueil'></form>";
   ?>
 

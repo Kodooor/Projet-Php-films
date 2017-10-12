@@ -1,4 +1,5 @@
 body{
   background-image: url(rideauAccueil.jpg);
-  background-repeat:no-repeat
+  background-repeat:no-repeat;
+  justify-content: center;
 }

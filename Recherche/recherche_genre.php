@@ -2,7 +2,7 @@
 <html>
 <head>
   <meta charset="utf-8" />
-  <link rel="stylesheet" href="../CSS/accueil.css" />
+  <link rel="stylesheet" href="" />
   <title> Filleul and Co </title>
 </head>
 <body>

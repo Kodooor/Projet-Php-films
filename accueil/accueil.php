@@ -4,9 +4,11 @@
 <title>Search Film</title>
 <link rel="stylesheet" href="../CSS/accueil.css"/>
 </head>
-<body>
+
 <header>
-  <h1><img src="../title.png" alt="Search film" style="width:300px;height:140px;"></h1>
+  <h1><img src="../titleB.png" alt="Search film" style="width:300px;height:140px;"></h1>
+</header>
+<body>
   <?php
 
 
@@ -33,7 +35,7 @@
 
    ?>
 
-</header>
+
 <footer> <p>     Juliette DUBERNET     |     Sofiane FITTIPALDI     |     Omayma OUGOUTI     </p> </footer>
 </body>
 </html>
