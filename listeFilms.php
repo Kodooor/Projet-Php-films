@@ -10,7 +10,8 @@
     <h1><img src="title.png" alt="Search film" style="width:150px;height:70px;"></h1>
   <?php
 
-    $theme=["Action"," Comédie","Drame", "Fiction","Horreur","Romance","Thriller"];
+
+
     $criteres=[
       array(
         "type" => "text",
@@ -27,16 +28,6 @@
       "text" => "question_text",
       "select" => "question_select"
     );
-
-
-    //Boutons recherches
-      echo "<ol>";
-
-      foreach($theme as $t){
-      echo "<li><input type='submit' value=$t ></li>";
-    }
-
-    echo "</ol></form>";
 
     //Rechercher un film
 

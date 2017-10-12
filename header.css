@@ -4,6 +4,7 @@ header li{
 header ol{
   display : inline-flex;
   margin : auto;
+  
 }
 h1{
   margin :auto;
@@ -13,16 +14,23 @@ header{
   display:flex;
   background-color:gray;
   padding-right: 4%;
+  flex:0 0 100%;
+}
+
+#theme{
+ display: flex;
+ flex-wrap: c
 }
 #rechercher{
   margin : auto; 
 }
-<<<<<<< HEAD
 
 #tous {
   display: flex;
   flex-wrap: wrap;
   margin-bottom: 10px;
+  justify-content: center;
+  
   
 }
 
@@ -32,8 +40,12 @@ header{
   margin-left: 10px;
   padding-right: 10px;
   padding-left: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
   border: 1px solid black;
   border-collapse: collapse;
+  background-color: gray;
+
 }
 
 =======
@@ -41,4 +53,3 @@ aside{
   display:flex;
   margin-left: 35%;
 }
->>>>>>> sofiane/master
