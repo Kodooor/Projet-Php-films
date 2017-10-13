@@ -6,7 +6,7 @@
 </head>
 
 <header>
-  <h1><img src="../titleB.png" alt="Search film" style="width:300px;height:140px;"></h1>
+  <img src="../titleB.png" alt="Search film" style="width:300px;height:140px;">
 </header>
 <body>
   <?php
