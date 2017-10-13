@@ -7,27 +7,32 @@
 </head>
 <body>
   <?php
-    $var = $_GET['codefilm'];
-    $file_db = new PDO('sqlite:../../BD/BD_PROJET.sqlite');
-    $result = $file_db->query("SELECT * FROM Films where code_film='$var' ;");
-
-    if($result == "no rows selected" or $result == ""){
-      echo " Aucun resultat trouvé pour votre recherche";
-    }
-    else{
-      foreach ($result as $f) {
-        echo "Les films trouvés sont :<br>";
-        echo "Le film n°$f[0] s'appelle $f[1]<br>";
-        # code...
-    }
-  }
   // Réessayer
   echo "<form method='POST' action='../Recherche/trouverf.php'><ol>";
   echo "<input type='submit' value='Réessayer'></div></form>";
 
   // Revenir a l'accueuil
-  echo "<form method='POST' action='../accueil/accueil.php'><ol>";
-  echo "<input type='submit' value='Accueil'></div></form>";
+  echo "<form method='POST' action='../accueil/accueil.php'>";
+  echo "<input type='submit' value='Accueil'></div></form></ol>";
+
+    $var = $_GET['codefilm'];
+    $file_db = new PDO('sqlite:../../BD/BD_PROJET.sqlite');
+    $result = $file_db->query("SELECT * FROM Films where code_film='$var' ;");
+    $result1 = $file_db->query("SELECT * FROM Films where code_film='$var' ;");
+    $donne=$result1 ->fetch();
+    echo "<h2> Le(s) film(s) trouvé(s) de code << $var >> sont : </h2><br>";
+
+    if ($donne[0] == ''  or $donne[0]==' '){
+      echo " Aucun resultat trouvé pour votre recherche";
+    }
+    else{
+      foreach ($result as $f) {
+
+        echo "<ol> Le film n°$f[0] s'appelle $f[1] <br>";
+    }
+    echo "</ol>";
+  }
+
 
     //
     //
