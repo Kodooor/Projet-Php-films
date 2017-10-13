@@ -5,8 +5,12 @@
   <link rel="stylesheet"/>
   <title> SQLite_listeIndividus </title>
 </head>
+<header>
+  <img src="../title.png" alt="Search film" style="width:300px;height:140px;">
+</header>
 <body>
 <?php
+
   try{
     $file_db = new PDO('sqlite:../BD/listeIndividus.sqlite');
     $file_db->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);

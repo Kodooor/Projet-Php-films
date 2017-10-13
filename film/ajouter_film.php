@@ -4,7 +4,7 @@
 <title>Search Film</title>
 </head>
 <header>
-  <h1><img src="../title.png" alt="Search film" style="width:150px;height:70px;"></h1>
+  <img src="../title.png" alt="Search film" style="width:300px;height:140px;">
 </header>
 <body>
 <?php
