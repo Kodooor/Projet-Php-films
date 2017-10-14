@@ -1,0 +1,55 @@
+header li{ 
+  list-style-type : none;
+}
+header ol{
+  display : inline-flex;
+  margin : auto;
+  
+}
+h1{
+  margin :auto;
+  padding-left: 2%;
+}
+header{
+  display:flex;
+  background-color:gray;
+  padding-right: 4%;
+  flex:0 0 100%;
+}
+
+#theme{
+ display: flex;
+ flex-wrap: c
+}
+#rechercher{
+  margin : auto; 
+}
+
+#tous {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 10px;
+  justify-content: center;
+  
+  
+}
+
+#film{
+  width: 30%;
+  margin-right: 10px;
+  margin-left: 10px;
+  padding-right: 10px;
+  padding-left: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border: 1px solid black;
+  border-collapse: collapse;
+  background-color: gray;
+
+}
+
+=======
+aside{
+  display:flex;
+  margin-left: 35%;
+}

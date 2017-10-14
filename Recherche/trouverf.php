@@ -2,11 +2,13 @@
 <html>
 <head>
 <title>Search Film</title>
-<link rel="stylesheet" href=""/>
+<link rel="stylesheet" href="../CSS/header.css"/>
 </head>
-<body>
-<header>
-  <h1><img src="title.png" alt="Search film" style="width:300px;height:140px;"></h1>
+
+  <header>
+    <img src="../title.png" alt="Search film" style="width:300px;height:140px;">
+  </header>
+  <body>
   <?php
 
   $theme = array(
@@ -74,7 +76,6 @@
 
    ?>
 
-</header>
 <footer> <p>     Juliette DUBERNET     |     Sofiane FITTIPALDI     |     Omayma OUGOUTI     </p> </footer>
 </body>
 </html>

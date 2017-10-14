@@ -2,20 +2,22 @@
 <html>
 <head>
   <meta charset="utf-8" />
-  <link rel="stylesheet" href="" />
+  <link rel="stylesheet" href="../CSS/header.css"/>
   <title> Search Film </title>
 </head>
+<header>
+  <img src="../title.png" alt="Search film" style="width:300px;height:140px;">
+</header>
 <body>
   <?php
 
   // Réessayer
-  echo "<form method='POST' action='../Recherche/trouverf.php'><ol>";
+  echo "<form method='POST' action='../Recherche/trouverf.php'>";
   echo "<input type='submit' value='Réessayer'></div></form>";
 
   // Revenir a l'accueuil
   echo "<form method='POST' action='../accueil/accueil.php'>";
   echo "<input type='submit' value='Accueil'></div></form>";
-  echo "</ol>";
 
 
     $var = $_GET['nomgenre'];
