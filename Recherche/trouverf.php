@@ -2,11 +2,21 @@
 <html>
 <head>
 <title>Search Film</title>
-<link rel="stylesheet" href="../CSS/header.css"/>
+<link rel="stylesheet" href="../CSS/trouverf.css"/>
 </head>
 
   <header>
-    <img src="../title.png" alt="Search film" style="width:300px;height:140px;">
+    <form method='POST' action='../accueil/accueil.php'>
+      <input type="image" src='../titleB.png' style='width:300px;height:140px;'>
+    </form>
+
+    <section>
+    <p>Rechercher à l'aide du code du film</p>
+    <form action='../Recherche/recherche_film.php'>
+      <input id=barreR type='text' name='codefilm'>
+      <input id=valid type="image" src='../CSS/loupe.png' style='width:40px;height:30px;'>
+    </form>
+  </section>
   </header>
   <body>
   <?php
@@ -43,34 +53,23 @@
 'perle de nanard'
 );
 
-  //Rechercher un film
-  echo "Rechercher à l'aide du code du film";
-  echo "<form action='../Recherche/recherche_film.php'>"; // champs texte
-  echo "<input type='text' name='codefilm'>";
-  echo "<input type='submit' value='Valider'></form>". "<br>";
-  // echo "<div id=''>";
-  // echo "<form method='POST' action='listeFilms.php'><ol>";
-  // echo "<input type='submit' value='Tous les films'></form></div>";
-
-
 
   // Afficher tous les films
   echo "<form method='POST' action='../film/listeFilms.php' >";
-  echo "<input type='submit' value='TOUS'></form>". "<br>";
+  echo "<input type='submit' id='tous' value='Voir tous les films'></form>". "<br>";
 
 
 
   //Tous les thèmes :
+  echo "<ol>";
   foreach ($theme as $elem) {
-
     // echo "<a href='recherche_genre.php?truc=$elem'><h4>$elem</h4></a>";
+    echo "<li>";
     echo "<form method='POST' action='../Recherche/recherche_genre.php?nomgenre=$elem'>";
-    echo "<input type='submit' value='$elem'></form>". "<br>";
-
-
+    echo "<input type='submit' id='typef' value='$elem'></form>". "<br>";
+    echo "</li>";
   }
-
-
+  echo "</ol>";
 
 
 
