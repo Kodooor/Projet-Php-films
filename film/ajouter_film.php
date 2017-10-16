@@ -2,9 +2,10 @@
 <html>
 <head>
 <title>Search Film</title>
+<link rel="stylesheet" href="../CSS/ajouter.css"/>
 </head>
 <header>
-  <img src="../title.png" alt="Search film" style="width:300px;height:140px;">
+  <img src="../titleB.png" alt="Search film" style="width:300px;height:140px;">
 </header>
 <body>
 <?php
@@ -60,17 +61,16 @@ $ajoute=[
     "text" => "question_text"
   );
 
-
   	echo "<form method='POST' action='film_ajouter.php'><ol>";
     echo " Veuillez insérer les infos du film : ";
 
     foreach ($ajoute as $a){
       $question_handlers[$a["type"]]($a);
     }
-    echo "<input type='submit' value='Ajouter'></form></ol>";
+    echo "<input id='submit' type='submit' value='Ajouter'></form>";
 
-    echo "<form method='POST' action='../accueil/accueil.php'><ol>";
-    echo "<input type='submit' value='Accueil'></form>";
+    echo "<form method='POST' action='../accueil/accueil.php'>";
+    echo "<input id='submit' type='submit' value='Accueil'></form></ol>";
   ?>
 
   </body>
