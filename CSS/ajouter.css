@@ -42,9 +42,8 @@ text-align: center;
 }
 
 #submit:hover{
-
   border-radius:12px 0 12px 0;
-	background: grey;
+	background: #E17B7F;
 	border:none;
 	color:white;
 	font:bold 12px Verdana;
@@ -56,13 +55,17 @@ text-align: center;
   cursor: pointer;
 }
 
-
-
 input {
+  margin-top:5px;
   border-radius:3px 0 3px 0;
   border:none;
   width: 20%;
   padding-top: 5px;
   margin: 6; padding: 6; border: none;
   
+}
+
+h2{
+  font-size: 20px;
+  color: #E17B7F;
 }

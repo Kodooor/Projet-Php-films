@@ -5,7 +5,9 @@
 <link rel="stylesheet" href="../CSS/ajouter.css"/>
 </head>
 <header>
-  <img src="../titleB.png" alt="Search film" style="width:300px;height:140px;">
+  <form method='POST' action='../accueil/accueil.php'>
+  <input type="image" src='../titleB.png' style='width:300px;height:140px;'>
+  </form>
 </header>
 <body>
 <?php
@@ -62,7 +64,7 @@ $ajoute=[
   );
 
   	echo "<form method='GET' action='film_ajouter.php'><ol>";
-    echo " Veuillez insérer les infos du film : ";
+    echo " <h2>Veuillez insérer les infos du film : </h2>";
 
     foreach ($ajoute as $a){
       $question_handlers[$a["type"]]($a);
