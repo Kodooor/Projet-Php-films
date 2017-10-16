@@ -1,12 +1,7 @@
 header{
   text-align: center;
 }
-width: 430px;
 
-input
-{
-margin: 6; padding: 6; border: none;
-}
 body {
 font-family: Helvetica, Arial, sans-serif; font-size: 12px;
 text-align: center;
@@ -42,5 +37,35 @@ text-align: center;
 	border:1px solid #ccc;
   width: 30%;
   height: 10%;
+  margin: 5px;
+  cursor: pointer;
+}
 
+#submit:hover{
+  border-radius:12px 0 12px 0;
+	background: #E17B7F;
+	border:none;
+	color:white;
+	font:bold 12px Verdana;
+	padding:6px 6px 6px 6px;
+	border:1px solid #ccc;
+  width: 30%;
+  height: 10%;
+  margin: 5px;
+  cursor: pointer;
+}
+
+input {
+  margin-top:5px;
+  border-radius:3px 0 3px 0;
+  border:none;
+  width: 20%;
+  padding-top: 5px;
+  margin: 6; padding: 6; border: none;
+  
+}
+
+h2{
+  font-size: 20px;
+  color: #E17B7F;
 }

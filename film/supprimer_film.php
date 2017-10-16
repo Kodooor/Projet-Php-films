@@ -22,7 +22,7 @@ $sup=[
 
 
   function question_text($q){
-    echo ($q["text"] . "<input id='barretext' type ='text' name='$q[name]'>" . "<br>");
+    echo ($q["text"] . "<input id='barretext' type ='text' name='$q[name]' required placeholder='Champ vide' >" . "<br>");
   }
 
   $question_handlers = array(
