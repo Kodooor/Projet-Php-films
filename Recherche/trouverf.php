@@ -13,7 +13,7 @@
     <section>
     <p>Rechercher à l'aide du code du film</p>
     <form action='../Recherche/recherche_film.php'>
-      <input id=barreR type='text' name='codefilm'>
+      <input id=barreR type='text' name='codefilm' required placeholder='n° du film'>
       <input id=valid type="image" src='../CSS/loupe.png' style='width:40px;height:30px;'>
     </form>
   </section>
