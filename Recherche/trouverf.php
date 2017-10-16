@@ -75,6 +75,6 @@
 
    ?>
 
-<footer> <p>     Juliette DUBERNET     |     Sofiane FITTIPALDI     |     Omayma OUGOUTI     </p> </footer>
+<footer>     Juliette DUBERNET     |     Sofiane FITTIPALDI     |     Omayma OUGOUTI     </footer>
 </body>
 </html>

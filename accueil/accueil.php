@@ -14,28 +14,28 @@
 
   //Rechercher un film
 
-  echo "<div id='trouver'>";
   echo "<form method='POST' action='../Recherche/trouverf.php'><ol>";
-  echo "<input type='submit' value='Trouver un film'></div></form>";
+  echo "<input type='submit' id='trouver' value='Trouver un film'></form>";
+  echo "<br>";
 
 
     // Ajouter
-    echo "<aside>";
-    echo "<form method='POST' action='../film/ajouter_film.php'><ol>";
-    echo "<input type='submit' value='Ajouter un film'></form>". "<br>";
+    echo "<section>";
+    echo "<form method='POST' action='../film/ajouter_film.php'>";
+    echo "<input type='submit' value='Ajouter un film'></form>";
 
 
 
     // Supprimer film
 
     echo "<form method='POST' action='../film/supprimer_film.php'>";
-    echo "<input type='submit' value='Supprimer un film'></form>". "<br>";
-    echo "<ol></aside>";
+    echo "<input type='submit' value='Supprimer un film'></form>";
+    echo "</section>";
 
 
    ?>
 
 
-<footer> <p>     Juliette DUBERNET     |     Sofiane FITTIPALDI     |     Omayma OUGOUTI     </p> </footer>
+<footer>      Juliette DUBERNET     |     Sofiane FITTIPALDI     |     Omayma OUGOUTI      </footer>
 </body>
 </html>

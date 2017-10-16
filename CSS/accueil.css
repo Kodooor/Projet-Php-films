@@ -3,25 +3,22 @@ body{
   background-size: 100%;
   background-repeat:no-repeat;
   justify-content: center;
-  margin-left: 38%;
-  
+  text-align:center;
 }
-
-input{
+#trouver{
   border-radius:12px 0 12px 0;
 	background: #f5f5f5;
 	border:none;
-	color:#555;
+	color:#555;;
 	font:bold 12px Verdana;
 	padding:6px 6px 6px 6px;
 	border:1px solid #ccc;
   width: 30%;
   height: 10%;
-  margin:1%;
-  padding:1%;
+  margin-top:10%;
+  margin-left:-3%;
 }
-
-input:hover{
+#trouver:hover{
   border-radius:12px 0 12px 0;
 	background: #E17B7F;
 	border:none;
@@ -31,23 +28,37 @@ input:hover{
 	border:1px solid #ccc;
   width: 30%;
   height: 10%;
-  cursor:pointer;
-  margin:1%;
-  padding:1%;
+  margin-top:10%;
+  margin-left:-3%;
 }
-
+section input{
+  border-radius:12px 0 12px 0;
+	background: #f5f5f5;
+	border:none;
+	color:#555;
+	font:bold 12px Verdana;
+	padding:6px 6px 6px 6px;
+	border:1px solid #ccc;
+  margin-right:20%;
+}
+section input:hover{
+  border-radius:12px 0 12px 0;
+	background: #E17B7F;
+	border:none;
+	color:#555;
+	font:bold 12px Verdana;
+	padding:6px 6px 6px 6px;
+	border:1px solid #ccc;
+  margin-right:20%;
+}
 footer{
   position: fixed;
   bottom: 0;
   left:0;
   margin-left: 30%;
+  color:white;
 }
-
-#trouver{
-  margin-left:-20%;
-  margin-top: 20%;
-}
-aside{
-   margin-left:20%;
-   margin-bottom: 50%;
+section{
+  display:inline-flex;
+  margin-top:3%;
 }

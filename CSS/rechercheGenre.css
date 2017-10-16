@@ -1,19 +1,27 @@
-h2{
-  margin-left: 20%;
-  color: red;
-  flex: 0 0 100%;
+body{
+font-family: Helvetica, Arial, sans-serif; font-size: 12px;
+text-align: center;
+    color: #fff;
+    background: #2d2d2d;
+    background: -webkit-gradient(
+        linear,
+        left bottom,
+        left top,
+        color-stop(0, rgb(60,60,60)),
+        color-stop(0.74, rgb(43,43,43)),
+        color-stop(1, rgb(60,60,60))
+        );
+     background: -moz-linear-gradient(
+        center bottom,
+        rgb(60,60,60) 0%,
+        rgb(43,43,43) 74%,
+        rgb(60,60,60) 100%
+        );
+     -moz-border-radius: 10px;
+     -webkit-border-radius: 10px;
+     border-radius: 10px;
+     margin: 10px;
 }
-img{
-  margin-left: 40%;
-}
-footer{
-  margin-left: 0%;
-  color: red;
-}
-p{
-  margin-left: 35%;
-}
-
 section{
   display: flex;
   flex-wrap: wrap;
@@ -25,5 +33,11 @@ li{
 }
 ol{
   flex: 1 1 27%;
-
+}
+footer{
+  position: fixed;
+  bottom: 0;
+  left:0;
+  margin-left: 30%;
+  color:white;
 }

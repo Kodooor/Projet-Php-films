@@ -2,11 +2,13 @@
 <html>
 <head>
   <meta charset="utf-8" />
-<link rel="stylesheet" href="../CSS/header.css"/>
+<link rel="stylesheet" href="../CSS/rechercheFilm.css"/>
   <title> Search Films </title>
 </head>
 <header>
-  <img src="../title.png" alt="Search film" style="width:300px;height:140px;">
+  <form method='POST' action='../accueil/accueil.php'>
+    <input type="image" src='../titleB.png' style='width:300px;height:140px;'>
+  </form>
 </header>
 <body>
   <?php
@@ -46,5 +48,6 @@
     // $idfilm = $file_db->query("SELECT * FROM Films WHERE code_film = '$idfilmdugenre';");
 
   ?>
+  <footer>     Juliette DUBERNET     |     Sofiane FITTIPALDI     |     Omayma OUGOUTI     </footer>
 </body>
 </html>

@@ -6,7 +6,9 @@
   <title> Search Film </title>
 </head>
 <header>
-  <img src="../title.png" alt="Search film" style="width:300px;height:140px;">
+  <form method='POST' action='../accueil/accueil.php'>
+    <input type="image" src='../titleB.png' style='width:300px;height:140px;'>
+  </form>
 </header>
 <body>
   <?php
@@ -50,5 +52,5 @@
 
   ?>
 </body>
-<footer> <p>     Juliette DUBERNET     |     Sofiane FITTIPALDI     |     Omayma OUGOUTI     </p> </footer>
+<footer>     Juliette DUBERNET     |     Sofiane FITTIPALDI     |     Omayma OUGOUTI     </footer>
 </html>
