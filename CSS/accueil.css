@@ -4,6 +4,7 @@ body{
   background-repeat:no-repeat;
   justify-content: center;
   margin-left: 38%;
+  
 }
 
 input{
@@ -16,6 +17,23 @@ input{
 	border:1px solid #ccc;
   width: 30%;
   height: 10%;
+  margin:1%;
+  padding:1%;
+}
+
+input:hover{
+  border-radius:12px 0 12px 0;
+	background: #E17B7F;
+	border:none;
+	color:#555;
+	font:bold 12px Verdana;
+	padding:6px 6px 6px 6px;
+	border:1px solid #ccc;
+  width: 30%;
+  height: 10%;
+  cursor:pointer;
+  margin:1%;
+  padding:1%;
 }
 
 footer{
