@@ -31,7 +31,7 @@
     $g=$file_db->query("SELECT code_genre FROM Genres WHERE nom_genre = '$var'");
     $donne = $g->fetch();
     $fg=$file_db->query("SELECT ref_code_film FROM Classification WHERE ref_code_genre =$donne[0];");
-    echo "<h2> Les films de genre << $var >> sont : </h2><br> ";
+    echo "<h2> Les films de genre << $var >> sont : </h2><br>";
 
     foreach($fg as $tonfilm){
       $result=$file_db->query("SELECT * FROM Films WHERE code_film = $tonfilm[0] ;");

@@ -1,6 +1,7 @@
 h2{
   margin-left: 20%;
   color: red;
+  flex: 0 0 100%;
 }
 img{
   margin-left: 40%;

@@ -2,29 +2,28 @@
 <html>
 <head>
   <meta charset="utf-8" />
-  <link rel="stylesheet" href=""/>
+  <link rel="stylesheet" href="../CSS/listeFilms.css"/>
   <title> SQLite_listeFilms </title>
 </head>
 <body>
   <header>
-    <h1><img src="title.png" alt="Search film" style="width:150px;height:70px;"></h1>
+    <h1>Tous les films</h1>
+  </header>
   <?php
   $file_db = new PDO('sqlite:../../BD/BD_PROJET.sqlite');
   $result = $file_db->query('SELECT * FROM Films;');
 
 
   //Revenir à l'accueil
-  echo "<form method='POST' action='../accueil/accueil.php'><ol>";
+  echo "<form method='POST' action='../accueil/accueil.php'>";
   echo "<input type='submit' value='Accueil'></form><br>";
 
-
-
+  echo "<section>";
   //Affichage des films
   foreach ($result as $film) {
-    echo "<br> Le film n°$film[0] s'appelle $film[1]<br>";
+    echo "<li>$film[1]</li>";
   }
-  echo "</ol>";
-
+  echo "</section>";
 
 //     $criteres=[
 //       array(
@@ -85,4 +84,5 @@
   // echo "</div>";
 ?>
 </body>
+<footer> <p>     Juliette DUBERNET     |     Sofiane FITTIPALDI     |     Omayma OUGOUTI     </p> </footer>
 </html>
