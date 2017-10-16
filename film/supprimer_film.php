@@ -22,7 +22,7 @@ $sup=[
 
 
   function question_text($q){
-    echo ("<p>" . $q["text"] . "</br><input id='barretext' type ='text' name='$q[name]'>" . "</p>");
+    echo ($q["text"] . "<input id='barretext' type ='text' name='$q[name]'>" . "<br>");
   }
 
   $question_handlers = array(
@@ -31,7 +31,7 @@ $sup=[
 
 
   	echo "<form method='POST' action='../film/film_supprimer.php'><ol>";
-    echo " <p> Veuillez insérer le code du film que vous souhaitez supprimer </p>";
+    echo " <p id='veuillez'> Veuillez insérer le code du film que vous souhaitez supprimer </p>";
 
     echo "<section id=supp>";
     foreach ($sup as $a){
