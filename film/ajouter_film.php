@@ -70,9 +70,8 @@ $ajoute=[
       $question_handlers[$a["type"]]($a);
     }
     echo "<input id='submit' type='submit' value='Ajouter'></form>";
-
-    echo "<form method='GET' action='../accueil/accueil.php'>";
-    echo "<input id='submit' type='submit' value='Accueil'></form></ol>";
+    echo "<br>";
+    echo "<input id='submit' type='reset' value='Remettre à zero'></ol>";
   ?>
 
   </body>
