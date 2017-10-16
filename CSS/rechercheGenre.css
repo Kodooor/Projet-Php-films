@@ -1,0 +1,28 @@
+h2{
+  margin-left: 20%;
+  color: red;
+}
+img{
+  margin-left: 40%;
+}
+footer{
+  margin-left: 0%;
+  color: red;
+}
+p{
+  margin-left: 35%;
+}
+
+section{
+  display: flex;
+  flex-wrap: wrap;
+}
+li{
+  list-style-type: none;
+  border: solid;
+  padding: 2em;
+}
+ol{
+  flex: 1 1 27%;
+
+}

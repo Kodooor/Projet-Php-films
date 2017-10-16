@@ -2,7 +2,7 @@
 <html>
 <head>
 <title>Search Film</title>
-<link rel="stylesheet" href="../CSS/header.css"/>
+<link rel="stylesheet" href="../CSS/trouverf.css"/>
 </head>
 
   <header>
@@ -44,7 +44,7 @@
 );
 
   //Rechercher un film
-  echo "Rechercher à l'aide du code du film";
+  echo " <h1> Rechercher à l'aide du code du film </h1>";
   echo "<form action='../Recherche/recherche_film.php'>"; // champs texte
   echo "<input type='text' name='codefilm'>";
   echo "<input type='submit' value='Valider'></form>". "<br>";

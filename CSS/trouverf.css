@@ -10,6 +10,14 @@ input{
   height: 10%;
   margin-left: 40%;
 }
+h1{
+  margin-left: 30%;
+  color: red;
+}
 body{
-  
+
+}
+footer{
+  margin-left: 35%;
+  color: red;
 }
