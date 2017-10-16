@@ -54,14 +54,14 @@ $ajoute=[
 ];
 
   function question_text($q){
-    echo ("<p>" . $q["text"] . "</br><input type ='text' name='$q[name]'>" . "</p>");
+    echo ("<p>" . $q["text"] . "</br><input type ='text' name='$q[name]' required placeholder='Champ vide' >" . "</p>");
   }
 
   $question_handlers = array(
     "text" => "question_text"
   );
 
-  	echo "<form method='POST' action='film_ajouter.php'><ol>";
+  	echo "<form method='GET' action='film_ajouter.php'><ol>";
     echo " Veuillez insérer les infos du film : ";
 
     foreach ($ajoute as $a){
@@ -69,7 +69,7 @@ $ajoute=[
     }
     echo "<input id='submit' type='submit' value='Ajouter'></form>";
 
-    echo "<form method='POST' action='../accueil/accueil.php'>";
+    echo "<form method='GET' action='../accueil/accueil.php'>";
     echo "<input id='submit' type='submit' value='Accueil'></form></ol>";
   ?>
 

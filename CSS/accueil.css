@@ -16,6 +16,19 @@ input{
 	border:1px solid #ccc;
   width: 30%;
   height: 10%;
+  cursor: pointer;
+}
+input:hover{
+  border-radius:12px 0 12px 0;
+	background: grey;
+	border:none;
+	color:white;
+	font:bold 12px Verdana;
+	padding:6px 6px 6px 6px;
+	border:1px solid #ccc;
+  width: 30%;
+  height: 10%;
+  cursor: pointer;
 }
 
 footer{
