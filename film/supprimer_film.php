@@ -2,9 +2,12 @@
 <html>
 <head>
 <title>Search Film</title>
+<link rel="stylesheet" href="../CSS/supprimer_film.css"/>
 </head>
 <header>
-  <h1>Search Film </h1>
+  <form method='POST' action='../accueil/accueil.php'>
+  <input type="image" src='../titleB.png' style='width:300px;height:140px;'>
+  </form>
 </header>
 <body>
 <?php
@@ -13,13 +16,13 @@ $sup=[
 	array(
 		"type"=>"text",
 		"name"=>"code_film",
-		"text" => "Code du film"
+		"text" => "Film n° :"
 
 	)];
 
 
   function question_text($q){
-    echo ("<p>" . $q["text"] . "</br><input type ='text' name='$q[name]'>" . "</p>");
+    echo ("<p>" . $q["text"] . "</br><input id='barretext' type ='text' name='$q[name]'>" . "</p>");
   }
 
   $question_handlers = array(
@@ -28,19 +31,16 @@ $sup=[
 
 
   	echo "<form method='POST' action='../film/film_supprimer.php'><ol>";
-    echo " Veuillez insérer le titre du film : ";
+    echo " <p> Veuillez insérer le code du film que vous souhaitez supprimer </p>";
 
+    echo "<section id=supp>";
     foreach ($sup as $a){
       $question_handlers[$a["type"]]($a);
     }
-    echo "<input type='submit' value='Supprimer'></form>";
 
+    echo "<input id='submit' type='submit' value='Supprimer le film'></form>";
 
-    echo "<form method='POST' action='../accueil/accueil.php'><ol>";
-    echo "<input type='submit' value='Accueil'></form>";
-
-    echo "</ol>";
-
+    echo "</section>";
   ?>
 
   </body>
