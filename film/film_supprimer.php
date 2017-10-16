@@ -2,9 +2,14 @@
 <html>
 <head>
 <title>Search Film</title>
+<link rel="stylesheet" href="../CSS/film_supprimer.css"/>
 </head>
 <header>
-  <h1><img src="title.png" alt="Search film" style="width:150px;height:70px;"></h1>
+  <header>
+    <form method='POST' action='../accueil/accueil.php'>
+    <input type="image" src='../titleB.png' style='width:300px;height:140px;'>
+    </form>
+  </header>
 </header>
 <body>
 <?php
@@ -25,9 +30,10 @@
   }
 
 
-echo "Vous avez supprimé le film ! ";
+echo "<p> Vous avez supprimé le film ! </p>";
+
 echo "<form method='POST' action='../accueil/accueil.php'><ol>";
-echo "<input type='submit' value='Accueil'></form>";
+echo "<input id=submit type='submit' value='Retourner accueil'></form>";
 
 
 
