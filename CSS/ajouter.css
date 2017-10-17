@@ -69,3 +69,14 @@ h2{
   font-size: 20px;
   color: #E17B7F;
 }
+
+footer{
+  position: fixed;
+  bottom: 0;
+  left:0;
+  padding-left: 33.5%;
+  padding-right: 34%;
+  color:white;
+  background-color: #E17B7F;
+  font-size:120%;
+}

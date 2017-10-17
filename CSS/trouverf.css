@@ -95,6 +95,13 @@ li{
   flex: 0 0 50%
 }
 footer{
-  text-align: center;
+  position: fixed;
+  bottom: 0;
+  left:0;
+  padding-left: 33.5%;
+  padding-right: 34%;
+  color:white;
+  background-color: #E17B7F;
+  font-size:14.5px;
 }
 

@@ -73,6 +73,7 @@ $ajoute=[
     echo "<br>";
     echo "<input id='submit' type='reset' value='Remettre à zero'></ol>";
   ?>
+  <footer>      Juliette DUBERNET     |     Sofiane FITTIPALDI     |     Omayma OUGOUTI      </footer>
 
   </body>
   </html>

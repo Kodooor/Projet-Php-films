@@ -2,6 +2,7 @@
 <html>
 <head>
 <title>Search Film</title>
+<link rel="stylesheet" href="../CSS/film_supprimer.css"/>
 </head>
 <header>
   <form method='POST' action='../accueil/accueil.php'>
@@ -34,7 +35,7 @@ duree, couleur, realisateur,image)
 
   }
   ajouter_un_film();
-  echo "Vous avez ajouté le film ! ";
+  echo "<p> Vous avez ajouté le film ! </p>";
 }
 catch(PDOException $e){
   echo $e->POSTMessage();
@@ -42,12 +43,14 @@ catch(PDOException $e){
 }
 
 echo "<form method='POST' action='../accueil/accueil.php'><ol>";
-echo "<input type='submit' value='Accueil'></form><br>";
+echo "<input id=submit type='submit' value='Retour Accueil'></form><br>";
 
 
 
 
 
 ?>
+<footer>      Juliette DUBERNET     |     Sofiane FITTIPALDI     |     Omayma OUGOUTI      </footer>
+
 </body>
 </html>

@@ -28,9 +28,11 @@ footer{
   position: fixed;
   bottom: 0;
   left:0;
-  margin-left: 30%;
+  padding-left: 33.5%;
+  padding-right: 34%;
   color:white;
-   font-size:1.5em;
+  background-color: #E17B7F;
+  font-size:14.7px;
 }
 #submit{
    border-radius:12px 0 12px 0;
@@ -53,4 +55,7 @@ footer{
    margin-bottom: 5%;
    margin-top: 2%;
    padding: 0.5% 1% 0.5% 1%;
+}
+h2{
+  color:#2FB09F;
 }
