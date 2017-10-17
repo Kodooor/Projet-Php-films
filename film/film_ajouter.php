@@ -30,7 +30,7 @@ duree, couleur, realisateur,image)
       $stmt->bindParam(':duree', $_POST["Duree"]);
       $stmt->bindParam(':couleur', $_POST["Couleur"]);
       $stmt->bindParam(':realisateur', $_POST["Réalisateur"]);
-      $stmt->bindValue(':image', "NB.jpg");
+      $stmt->bindValue(':image', $_POST["Image"]);
       $stmt->execute();
 
   }
