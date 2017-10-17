@@ -36,15 +36,17 @@
 
 
   foreach ($result as $film) {
+    echo "<li>";
     echo "<img src=$film[8] alt='IMAGE NON DISPONIBLE' style='width:240px;height:300px;'>";
-    echo "<li id='code_film'>Film n°$film[0]</li>";
-    echo "<li id='titre_original'>$film[1]</li>";
-    echo "<li id='titre_francais'>Titre français: $film[2]</li>";
-    echo "<li id='realisateur'>Realisateur: $film[7]</li>";
-    echo "<li id='date'>Date: $film[4]</li>";
-    echo "<li id='duree'>Duree: $film[5]</li>";
-    echo "<li id='couleur'>Couleur: $film[6]</li>";
-    echo "<li id='pays'>Pays: $film[3]</li>";
+    echo "<p id='code_film'>Film n°$film[0] </p>";
+    echo "<p id='titre_original'>$film[1] </p>";
+    echo "<p id='titre_francais'>Titre français: $film[2] </p>";
+    echo "<p id='realisateur'>Realisateur: $film[7] </p>";
+    echo "<p id='date'>Date: $film[4] </p>";
+    echo "<p id='duree'>Duree: $film[5] </p>";
+    echo "<p id='couleur'>Couleur: $film[6] </p>";
+    echo "<p id='pays'>Pays: $film[3] </p>";
+    echo "</li>";
   }
   echo "</section>";
 
