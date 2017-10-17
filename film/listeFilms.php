@@ -31,7 +31,7 @@
 
   foreach ($result as $film) {
     echo "<li>";
-    echo "<img src=$film[8] alt='IMAGE NON DISPONIBLE' style='width:240px;height:300px;'>";
+    echo "<img src='../image/$film[8]' alt='IMAGE NON DISPONIBLE' style='width:240px;height:300px;'>";
     echo "<p id='code_film'>Film n°$film[0] </p>";
     echo "<h2 id='titre_original'>$film[1] </h2>";
     echo "<p id='titre_francais'>Titre français: $film[2] </p>";
