@@ -20,19 +20,9 @@ text-align: center;
      -moz-border-radius: 10px;
      -webkit-border-radius: 10px;
      border-radius: 10px;
-     margin: 10px;
-}
-section{
-  display: flex;
-  flex-wrap: wrap;
-}
-li{
-  list-style-type: none;
-  border: solid;
-  padding: 2em;
 }
 ol{
-  flex: 1 1 27%;
+  margin-left:-3%;
 }
 footer{
   position: fixed;
@@ -40,4 +30,27 @@ footer{
   left:0;
   margin-left: 30%;
   color:white;
+   font-size:1.5em;
+}
+#submit{
+   border-radius:12px 0 12px 0;
+	background: #f5f5f5;
+	border:none;
+	color:#555;
+	font:bold 10px Verdana;
+   border:1px solid #ccc;
+   margin-bottom: 5%;
+   margin-top: 2%;
+   padding: 0.5% 1% 0.5% 1%;
+}
+#submit:hover{
+   border-radius:12px 0 12px 0;
+	background: #E17B7F;
+	border:none;
+	color:white;
+	font:bold 10px Verdana;
+   border:1px solid #ccc;
+   margin-bottom: 5%;
+   margin-top: 2%;
+   padding: 0.5% 1% 0.5% 1%;
 }
