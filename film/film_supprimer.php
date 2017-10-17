@@ -24,13 +24,13 @@
 
     }
     supprimer_un_membre();
+    echo "<p> Vous avez supprimé le film ! </p>";
   }
   catch(PDOException $e){
     echo $e->POSTMessage();
+    echo "<p> Aucun film trouvé ! </p>";
   }
 
-
-echo "<p> Vous avez supprimé le film ! </p>";
 
 echo "<form method='POST' action='../accueil/accueil.php'><ol>";
 echo "<input id=submit type='submit' value='Retourner accueil'></form>";

@@ -14,32 +14,26 @@
   <?php
   // Réessayer
   echo "<form method='POST' action='../Recherche/trouverf.php'>";
-  echo "<input type='submit' id='submit' value='Retour liste des genres'></div></form>";
+  echo "<input type='submit' value='Réessayer'></div></form>";
 
+  // Revenir a l'accueuil
+  echo "<form method='POST' action='../accueil/accueil.php'>";
+  echo "<input type='submit' value='Accueil'></div></form>";
 
     $var = $_GET['codefilm'];
     $file_db = new PDO('sqlite:../../BD/BD_PROJET.sqlite');
     $result = $file_db->query("SELECT * FROM Films where code_film='$var' ;");
     $result1 = $file_db->query("SELECT * FROM Films where code_film='$var' ;");
     $donne=$result1 ->fetch();
-    //echo "<h2> Le film trouvé <strong>$var est : </h2><br>";
+    echo "<h2> Le(s) film(s) trouvé(s) de code << $var >> sont : </h2><br>";
 
     if ($donne[0] == ''  or $donne[0]==' '){
       echo " Aucun resultat trouvé pour votre recherche";
     }
     else{
-      foreach ($result as $film) {
+      foreach ($result as $f) {
 
-        echo "<ol>";
-        echo "<img src=$film[8] alt='IMAGE NON DISPONIBLE' style='width:240px;height:300px;'>";
-        echo "<p id='code_film'>Film n°$film[0] </p>";
-        echo "<h2 id='titre_original'>$film[1] </h2>";
-        echo "<p id='titre_francais'>Titre français: $film[2] </p>";
-        echo "<p id='realisateur'>Realisateur: $film[7] </p>";
-        echo "<p id='date'>Date: $film[4] </p>";
-        echo "<p id='duree'>Duree: $film[5] </p>";
-        echo "<p id='couleur'>Couleur: $film[6] </p>";
-        echo "<p id='pays'>Pays: $film[3] </p>";
+        echo "<ol> Le film n°$f[0] s'appelle $f[1] <br>";
     }
     echo "</ol>";
   }

@@ -63,7 +63,7 @@ $ajoute=[
     "text" => "question_text"
   );
 
-  	echo "<form method='GET' action='film_ajouter.php'><ol>";
+  	echo "<form method='POST' action='film_ajouter.php'><ol>";
     echo " <h2>Veuillez insérer les infos du film : </h2>";
 
     foreach ($ajoute as $a){
